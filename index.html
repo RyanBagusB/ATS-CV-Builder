@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATS CV Builder</title>
+</head>
+<body>
+  <h1>ATS CV Builder</h1>
+  <form id="cvHeader">
+    <label for="name">Nama</label>
+    <input type="text" id="name" name="name">
+
+    <label for="nomorHandphone">Nomor Handphone</label>
+    <input type="text" id="phoneNumber" name="phoneNumber" inputmode="numeric" pattern="[0-9]*">
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email">
+
+    <label for="linkedinURL">Linkedin Profil URL</label>
+    <input type="text" id="linkedinURL" name="linkedinURL">
+
+    <label for="portfolioURL">Portfolio/Website URL</label>
+    <input type="text" id="portfolioURL" name="portfolioURL">
+    
+    <label for="alamat">Alamat</label>
+    <input type="text" id="address" name="address">  
+
+    <label for="description">Deskripsi singkat tentang kamu:</label>
+    <textarea id="description" name="description" rows="4" cols="50"></textarea>    
+
+    <label for="photo">Upload Photo:</label>
+    <input type="file" id="photo" accept="image/*">
+
+    <button type="submit">Save CV</button>
+    <button id="downloadPdf">Download PDF</button>
+    <button type="button" id="addSectionBtn">Tambah Seksi</button>
+    <button type="button" id="addFooterBtn">Tambah Footer</button>
+  </form>
+
+  <div id="additionalSections"></div>
+  <div id="additionalFooters"></div>
+
+  <div>
+    <iframe id="pdfPreview" style="width: 100%; height: 1200px;" frameborder="0"></iframe>
+  </div>
+
+  <div id="cvPreview">
+    <h2>Preview</h2>
+    <img id="photoPreview" alt="CV Photo" style="display: none;">
+    <p id="namePreview"></p>
+    <p id="emailPreview"></p>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
